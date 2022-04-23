@@ -25,7 +25,7 @@ export default function Navbar() {
             Healthmatching<FitnessCenterIcon />
             <Button color="inherit" href="/">Home</Button>
             <Button color="inherit" href="/">Mathing</Button>
-            <Button color="inherit" href="/community">Community</Button>
+            <Button color="inherit" href="/list">Community</Button>
           </Typography>
           <div>
             <Button

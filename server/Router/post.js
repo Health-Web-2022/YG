@@ -17,13 +17,15 @@ router.post("/newpost", (req, res) => {
 });
 
 // 게시판 목록 조회
-router.get('/community', (req,res) => {
-    database.query('SELECT * FROM post', (err, data) => {
+router.get('/list', (req,res) => {
+    database.query('SELECT post_id, title, writer, write_date FROM post', (err, result) => {
         if(err) res.send(err);
-        else res.send({result});
+        else{
+            res.send(result);
+            console.log("게시글 목록 조회 성공!");
+        }
     })
 })
-
 
         
 module.exports = router;
